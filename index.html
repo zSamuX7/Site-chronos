@@ -2,6 +2,9 @@
 <html lang="pt-br">
 <head> 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <title>chronos</title>
 <link rel="stylesheet" href="style.css">
@@ -21,7 +24,7 @@
 
 <div class="container-botoes">
 <a href="https://discordapp.com/oauth2/authorize?client_id=1207326674094399508&scope=bot&permissions=2146958847" class="botao">
-<span class="icone">+</span>
+<span class="icone">&#43;</span>
 Adicionar
   </a>
   
@@ -44,6 +47,34 @@ Adicionar
   </div>
 </div>
 
+<button class="menu-btn" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
+<nav class="sidebar" id="sidebar">
+  <a href="index.html">Início</a>
+</nav>
+
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<script>
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+function toggleMenu() {
+  menuBtn.classList.toggle("active");
+  sidebar.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+const links = document.querySelectorAll(".sidebar a");
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
+</script>
 </body>
 </html>
