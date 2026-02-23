@@ -1,4 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #1a1f24;
+}
+
 body {
+  min-height: 100vh;
   background: linear-gradient(
     180deg,
     #1a1f24 0%,
@@ -9,8 +19,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0;
-  min-height: 100vh; 
+}
+@media (max-width: 768px) {
+  .item-retangulo {
+    width: 90%;
+    height: auto;
+  }
 }
 @keyframes glowPulse {
   0% { text-shadow: 0 0 5px #00f0ff; }
@@ -79,6 +93,7 @@ h1 {
     font-weight: 300;
 }
 .botao {
+	font-family: 'Comic Neue', cursive;
     display: inline-flex;
     align-items: center;
     gap: 20px;
@@ -172,15 +187,100 @@ h1 {
   margin: 0;
 }
 .titulo-c1 {
+	font-family: 'Comic Neue', cursive;
   font-size: 60px;             
   color: white;    
-  text-shadow: 
-    -1px -1px 1px #103FCE,
-     1px -1px 5px #103FCE,
-    -1px  1px 10px #103FCE,
-     1px  1px 20px #103FCE;    
   margin-top: 0;               
   margin-bottom: 20px;         
-  font-family: 'Arial', sans-serif; 
   text-transform: uppercase;  
+}
+
+/* Menu outros sites */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+.menu-btn span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* ANIMAÇÃO VIRAR X */
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #1a1f24;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s cubic-bezier(.77,0,.18,1);
+  z-index: 1001;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 18px 30px;
+  font-size: 50px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #2f3a44;
+}
+
+.sidebar a.active {
+  background: #2f3a44;
+  border-left: 4px solid white;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* OVERLAY COM BLUR */
+.overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
