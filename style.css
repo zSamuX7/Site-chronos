@@ -16,12 +16,6 @@ html, body {
 html {
 background: #0C007A;
 }
-
-@media (max-width: 768px) {
-  .item-retangulo {
-    	width: 90%;
-    	height: auto;
-  }
 header {
 	text-align: center;
 	padding: 120px 20px 30px 20px;
@@ -330,6 +324,19 @@ main {
 body.no-scroll {
   overflow: hidden;
 }
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .category {
+        width: 100%;
+    }
+}
+
 
 
 
