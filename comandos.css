@@ -1,0 +1,279 @@
+:root {
+	--accent-color: #5865F2; 
+	--accent-hover: #4752C4;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+	overscroll-behavior: none;
+    min-height: 100vh;
+    background: linear-gradient(
+    180deg,
+    #030024 0%,
+    #050037 25%,
+    #060053 50%,
+    #0C007A 75%
+    );
+    color: white;
+}
+@media (max-width: 768px) {
+  .item-retangulo {
+    width: 90%;
+    height: auto;
+  }
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 120px 20px 30px 20px;
+}
+.bot-avatar {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 4px solid var(--accent-color);
+	margin-bottom: -20px;
+	box-shadow: 0 0 20px rgba(88,101,242,0.4);
+}
+header h1 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 40px;
+	margin-bottom: -15px;
+}
+
+header p {
+	font-family: 'Comic Neue', cursive;
+	opacity: 0.7;
+}
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* CATEGORIA */
+        .category {
+            margin-top: 40px;
+        }
+
+        .category h2 {
+            border-left: 5px solid white;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* CARD DE COMANDO (MODIFICADO PARA EXPANDIR) */
+        .command {
+            background: rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px); 
+            
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            
+            padding: 20px;
+            margin-bottom: 20px;
+            cursor: pointer; /* Indica que é clicável */
+            transition: all 0.3s ease;
+            overflow: hidden; /* Garante que a imagem suma ao fechar */
+        }
+
+        .command:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .command-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+.command-name {
+	font-family: 'Comic Neue', cursive;
+	font-weight: bold;
+	font-size: 18px;
+	}
+.command-desc {
+	font-family: 'Comic Neue', cursive;
+	opacity: 0.7;
+	margin-top: 5px;
+	font-size: 14px;
+}
+.alias {
+	font-family: 'Comic Neue', cursive;
+	font-size: 14px;
+	opacity: 0.6;
+	margin-left: 8px;
+	}
+
+        /* ÁREA DA PRINT (EXPANSÍVEL) */
+        .command-screenshot {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+
+        .command-screenshot img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ESTADO ATIVO (QUANDO CLICADO) */
+        .command.active {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .command.active .command-screenshot {
+            max-height: 800px; /* Valor alto para caber a imagem */
+            opacity: 1;
+            padding-bottom: 10px;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+            opacity: 0.5;
+        }
+
+        .command.active .arrow {
+            transform: rotate(180deg);
+        }
+
+
+
+
+/* ======================
+   BOTÃO FLUTUANTE
+====================== */
+
+.menu-btn {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+.menu-btn span {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* posição normal */
+.menu-btn span:nth-child(1) {
+  top: 0;
+}
+
+.menu-btn span:nth-child(2) {
+  top: 10px;
+}
+
+.menu-btn span:nth-child(3) {
+  top: 20px;
+}
+
+/* X perfeito */
+.menu-btn.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+/* ======================
+   SIDEBAR GLASS
+====================== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  padding-top: 120px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-right: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.4s ease;
+  z-index: 1002;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 40px;
+}
+
+.sidebar ul li {
+  margin: 25px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+  opacity: 0.7;
+}
+
+/* ======================
+   OVERLAY
+====================== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1001;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ajuste conteúdo */
+
+main {
+  margin-top: 120px;
+}
+body.no-scroll {
+  overflow: hidden;
+}

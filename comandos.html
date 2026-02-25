@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>chronos</title>
+	<link rel="stylesheet" href="comandos.css">
+	<title>Comandos Chronos</title>
+</head>
+<body>
+	<header>
+        <img src="img/chronos.png" alt="Avatar do Bot" class="bot-avatar">
+</div>
+		<h1>Chronos</h1>
+		<p>Explora a lista completa de todos os comandos disponiveis do chronos.</p>
+	</header>
+	
+	
+	
+<div class="container">
+    <div class="category">
+        <h2>🎒 Jornada</h2>
+			<div class="command" onclick="this.classList.toggle('active')">
+				<div class="command-header">
+					<div>
+						<span class="command-name">@Chronos iniciar</span>
+					<span class="alias">(Alias: start)</span>
+                </div>
+					<span class="arrow">▼</span>
+            </div>
+				<p class="command-desc">Inicie sua jornada pokémon.</p>
+            
+					<div class="command-screenshot">
+						<img src="img/poke.png" alt="Print do comando">
+ 				</div>
+			</div>
+
+				<div class="command" onclick="this.classList.toggle('active')">
+				<div class="command-header">
+					<div>
+						<span class="command-name">@Chronos pokemon</span>
+					<span class="alias">(Alias: poke)</span>
+                </div>
+					<span class="arrow">▼</span>
+            </div>
+				<p class="command-desc">Gere um pokémon de capture-o.</p>
+            
+					<div class="command-screenshot">
+						<img src="img/poke.png" alt="Print do comando">
+ 				</div>
+			</div>
+			
+
+	<div class="command">
+		<div class="command-name">@Chronos capturar
+		<span class="alias">(alias: catch, c)</span>
+		</div>
+		<div class="command-desc">
+        Capture o pokémon gerado.
+		</div>
+    </div>
+
+	<div class="command">
+		<div class="command-name">@Chronos missões
+		<span class="alias">(alias: quests)</span>
+		</div>
+		<div class="command-desc">
+        Faça missões e progrida ainda mais.
+		</div>
+    </div>
+
+	<div class="command">
+		<div class="command-name">@Chronos batalhar
+		<span class="alias">(alias: battle)</span>
+		</div>
+		<div class="command-desc">
+        Batalhe contra outros treinadores.
+		</div>
+    </div>
+
+
+	</div> 
+	
+		<div class="category">
+		<h2>📘 Informações</h2>
+	<div class="command">
+		<div class="command-name">@Chronos perfil
+		<span class="alias">(alias: profile, pr)</span>
+		</div>
+		<div class="command-desc">
+        Veja seu perfil de treinador pokémon.
+		</div>
+	</div>
+		<div class="command">
+		<div class="command-name">@Chronos pokedex
+		<span class="alias">(alias: px, p)</span>
+		</div>
+		<div class="command-desc">
+        Veja todos os seus pokémons capturados.
+		</div>
+	</div>
+			<div class="command">
+		<div class="command-name">@Chronos info
+		<span class="alias">(alias: i)</span>
+		</div>
+		<div class="command-desc">
+        Veja as informações dos seus pokémons capturados.
+		</div>
+	</div>
+		<div class="command">
+		<div class="command-name">@Chronos ranks
+		</div>
+		<div class="command-desc">
+        Veja todos os ranks disponiveis.
+		</div>
+	</div>
+		<div class="command">
+		<div class="command-name">@Chronos titulos
+		<span class="alias">(alias: titles)</span>
+		</div>
+		<div class="command-desc">
+        Veja todos os seus titulos adquidos e equipe.
+		</div>
+	</div>
+		<div class="category">
+		<h2>💰 Economia</h2>
+	<div class="command">
+		<div class="command-name">@Chronos diário
+		<span class="alias">(alias: daily, dp)</span>
+		</div>
+		<div class="command-desc">
+        Pegue seus pokécoins diários.
+		</div>
+	</div>
+		<div class="command">
+		<div class="command-name">@Chronos pagar
+		<span class="alias">(alias: pay, tpc)</span>
+		</div>
+		<div class="command-desc">
+        Transfira pokécoins para outro treinador.
+		</div>
+	</div>
+		<div class="command">
+		<div class="command-name">@Chronos votar
+		<span class="alias">(alias: vote)</span>
+		</div>
+		<div class="command-desc">
+        Vote no chronos para receber recompensas extras!
+		</div>
+	</div>
+		<div class="command">
+		<div class="command-name">@Chronos pokemart
+		<span class="alias">(alias: pm)</span>
+		</div>
+		<div class="command-desc">
+        Veja a pokemart.
+		</div>
+	</div>
+	
+	
+	
+		</div>
+</div>
+	
+
+
+  <!-- BOTÃO FLUTUANTE -->
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- MENU -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Início</a></li>
+      <li><a href="comandos.html">📜 Comandos</a></li>
+
+    </ul>
+  </nav>
+
+<script>
+function toggleMenu() {
+  document.querySelector(".sidebar").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
+  document.querySelector(".menu-btn").classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
+}
+</script>
+
+
+</body>
+</html>
+

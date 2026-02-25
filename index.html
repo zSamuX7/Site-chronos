@@ -1,80 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head> 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-
-<meta charset="UTF-8">
-<title>chronos</title>
-<link rel="stylesheet" href="style.css">
-
-</head> 
-<body> 
-<h1>BOT POKÉMON</h1>
-<div class="perfil-neon">
-<img src="img/chronos.png" alt="" class="imagem">
-</div>
-<p class="descricao1">
-    Chronos
-</p>
-<p class="descricao2">
-    Sua jornada pokémon começa agora.
-</p>
-
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>chronos</title>
+	<link rel="stylesheet" href="style.css">
+	<title>Inicio - Chronos</title>
+</head>
+<body>
+	<header>
+		<img src="img/chronos.png" alt="Avatar do Bot" class="bot-avatar">
+		<h2 class="chronos">Chronos</h2>
+		<p class= "desc1">Sua jornada pokémon começa agora.</p>
+	</header>
+	
 <div class="container-botoes">
-<a href="https://discordapp.com/oauth2/authorize?client_id=1207326674094399508&scope=bot&permissions=2146958847" class="botao">
-<span class="icone">&#43;</span>
-Adicionar
-  </a>
-  
-<a href="https://discord.gg/GeD5jK7mcV" class="botao botao-2">
-    <img src="img/discord.png" class="icone-img">
-    Entrar no servidor
-  </a>
+    <a href="https://discordapp.com/oauth2/authorize?client_id=1207326674094399508&scope=bot&permissions=2146958847" 
+       class="btn btn-adicionar" 
+       target="_blank">
+        <span class="icone">+</span>
+        Adicionar
+    </a>
+
+    <a href="https://discord.gg/GeD5jK7mcV" 
+       class="btn btn-servidor" 
+       target="_blank">
+        <img src="img/discord.png" alt="" class="icone-discord">
+        Servidor
+    </a>
 </div>
 
-<div class="container">
 
-  <div class="item-retangulo">
-   <h2 class="titulo-c1">Mais Atividade.</h2> 
-   <p style="color: white; font-size: 40px; font-family: sans-serif;">Chronos transforma seu servidor em um ambiente dinâmico, incentivando membros a interagir, desafiar uns aos outros e evoluir constantemente.</p>
+
+
+<section class="section">
+	<h2 class="section-title">Recursos do Chronos</h2>
+		<div class="grid">
+			<div class="card">
+				<h3>💭 Mais interatividade</h3>
+				<p>Chronos transforma seu servidor em um ambiente dinâmico, incentivando membros a interagir, desafiar uns aos outros e evoluir constantemente.</p>
+				<span class="tag">Engajamento</span>
+			</div>
+			
+			<div class="card">
+				<h3>👾 Sistema Pokémon</h3>
+				<p>Capture, evolua e batalhe com centenas de criaturas disponíveis.</p>
+				<span class="tag">493 disponíveis</span>
+			</div>
+			
+			<div class="card">
+				<h3>🌍 Expansão Constante
+</h3>
+				<p>Novas funcionalidades, ajustes e melhorias são adicionados constantemente para manter a experiência sempre evoluindo.</p>
+				<span class="tag">Sempre atualizado</span>
+    	</div>
+			<div class="card">
+				<h3>⚡️ Eventos Temporários
+</h3>
+				<p>Participe de eventos especiais com chances aumentadas, Pokémon exclusivos e desafios limitados.</p>
+				<span class="tag">Tempo Ilimitado</span>
+    	</div>
+
+
+
+
+
+
+		</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- BOTÃO FLUTUANTE -->
+  <div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  <div class="item-retangulo">
-   <h2 class="titulo-c1">Capture</h2> 
-   <p style="color: white; font-size: 45px; font-family: sans-serif;">Capture todos os 386 Pokémon até a 3ª geração e complete sua pokédex!</p>
-  </div>
-</div>
+  <!-- OVERLAY -->
+  <div class="overlay" onclick="toggleMenu()"></div>
 
-<button class="menu-btn" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+  <!-- MENU -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Início</a></li>
+      <li><a href="comandos.html">📜 Comandos</a></li>
 
-<nav class="sidebar" id="sidebar">
-  <a href="index.html">Início</a>
-</nav>
-
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    </ul>
+  </nav>
 
 <script>
-const menuBtn = document.querySelector(".menu-btn");
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-
 function toggleMenu() {
-  menuBtn.classList.toggle("active");
-  sidebar.classList.toggle("active");
-  overlay.classList.toggle("active");
+  document.querySelector(".sidebar").classList.toggle("active");
+  document.querySelector(".overlay").classList.toggle("active");
+  document.querySelector(".menu-btn").classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
 }
-const links = document.querySelectorAll(".sidebar a");
-links.forEach(link => {
-  if (link.href === window.location.href) {
-    link.classList.add("active");
-  }
-});
 </script>
+
+
+
 </body>
 </html>

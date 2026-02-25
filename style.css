@@ -1,227 +1,252 @@
+
 html, body {
   margin: 0;
   padding: 0;
-}
-
-html {
-  background: #1a1f24;
-}
-
-body {
-  min-height: 100vh;
-  background: linear-gradient(
+	overscroll-behavior: none;
+    min-height: 100vh;
+    background: linear-gradient(
     180deg,
-    #1a1f24 0%,
-    #232b33 50%,
-    #2f3a44 100%
-  );
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+    #030024 0%,
+    #050037 25%,
+    #060053 50%,
+    #0C007A 75%
+    );
+    color: white;
 }
+html {
+background: #0C007A;
+}
+
 @media (max-width: 768px) {
   .item-retangulo {
-    width: 90%;
-    height: auto;
+    	width: 90%;
+    	height: auto;
   }
+header {
+	text-align: center;
+	padding: 120px 20px 30px 20px;
 }
-@keyframes glowPulse {
-  0% { text-shadow: 0 0 5px #00f0ff; }
-  50% { text-shadow: 0 0 15px #00f0ff; }
-  100% { text-shadow: 0 0 5px #00f0ff; }
+.bot-avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 4px solid var(--accent-color);
+	margin-bottom: -20px;
+	box-shadow: 0 0 20px rgba(88,101,242,0.4);
 }
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    font-size: 70px;
-    letter-spacing: 6px;
-    margin: 15;
-    color: #00f0ff;
-    text-shadow: 
-    0 0 5px #00f0ff,
-    0 0 10px #00f0ff;
-    animation: glowPulse 2.5s infinite ease-in-out;
-}
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-.perfil-neon {
-    animation: float 4s ease-in-out infinite;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: 
-        inset 0 0 15px #00F2FF, 
-        0 0 15px #00F2FF, 
-        0 0 30px #00F2FF;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.perfil-neon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}
-.imagem {
-  display: block;
-  margin: 10;
-  width: 300px;
-  border-radius: 140px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.descricao1 {
-    text-align: center;
-    color: white;
-    font-size: 80px;
-    margin-top: 10px;  
-    margin-bottom: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 300;
-}
-.descricao2 {
-    text-align: center;
-    color: #8F8F8F;
-    font-size: 40px;
-    margin-top: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 300;
-}
-.botao {
+.chronos {
 	font-family: 'Comic Neue', cursive;
-    display: inline-flex;
+	font-size: 50px;
+	margin-bottom: -20px;
+}
+.desc1 {
+	font-family: 'Comic Neue', cursive;
+	color: #8F8F8F;
+	font-size: 20px;
+	margin-bottom: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- ESTILO BASE DOS BOTÕES (COM EFEITO VIDRO) --- */
+.btn {
+    display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 30px 50px;
-    font-size: 40px;
-    font-weight: 500;
-    text-decoration: none;
+    padding: 12px 24px; /* Um pouco mais gordinho fica melhor no vidro */
+    border-radius: 12px; /* Bordas mais arredondadas combinam mais */
     color: white;
-    border-radius: 20px;
-    border: 2px solid #00e1ff;
-    background: linear-gradient(135deg, #5f7cff, #6f5bff);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
     
-    transition: 0.3s ease;
+    /* O DNA DO GLASSMORPHISM */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Sombra suave colorida para dar profundidade */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
-.botao:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 225, 255, 0.8);
-}
-.icone {
-    width: 35px;
-    height: 35px;
-    background: white;
-    color: #5f7cff;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-.container-botoes {
-  display: flex;          
-  flex-direction: row;    
-  gap: 20px;             
-  justify-content: center; 
-  align-items: center;     
-  margin-top: 20px;      
-}
-.botao-2 {
-    background: linear-gradient(135deg, #2f3a44, #1a1f24);
-    border-color: #5f7cff;
-}
-.icone-img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-}
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 50px; 
-}
-.item-retangulo {
-  width: 700px;
-  height: 400px;
-  border-radius: 50px;
-  background-color: #2f3a44;
-  border: 4px solid #b0b0b0;
-  padding: 40px; 
-  display: flex;
-  flex-direction: column;      
-  justify-content: flex-start; 
-  padding-top: 30px    
-  align-items: center;       
-  text-align: center;
-  color: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  box-sizing: border-box;      
-}
-.item-retangulo:first-child {
-  margin-top: 80px;
-}
-
-.item-retangulo h1 {
-  margin-top: 0;
-  font-size: 60px;
-  margin-bottom: 15px; /* espaço abaixo do título */
+/* Efeito de clique (afundar) */
+.btn:active {
+    transform: scale(0.95);
 }
 
 
-.item-retangulo h1 {
-  font-size: 60px;
-  margin-bottom: 15px;
-}
-
-.item-retangulo p {
-  font-size: 18px;
-  opacity: 0.8;
-  margin: 0;
-}
-.titulo-c1 {
+/* --- BOTÃO 1: ADICIONAR (VIDRO VERDE) --- */
+.btn-adicionar {
 	font-family: 'Comic Neue', cursive;
-  font-size: 60px;             
-  color: white;    
-  margin-top: 0;               
-  margin-bottom: 20px;         
-  text-transform: uppercase;  
+    /* Fundo verde bem transparente */
+    background: rgba(16, 185, 129, 0.15);
+    /* Borda verde sutil */
+    border: 1px solid rgba(16, 185, 129, 0.4);
+	text-decoration: none;
 }
 
-/* Menu outros sites */
+.btn-adicionar:hover {
+    /* Fica mais sólido e brilha mais no hover */
+    background: rgba(16, 185, 129, 0.3);
+    border-color: rgba(16, 185, 129, 0.8);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    transform: translateY(-3px);
+	text-decoration: none;
+}
+
+
+/* --- BOTÃO 2: SERVIDOR (VIDRO DISCORD/ROXO) --- */
+.btn-servidor {
+	font-family: 'Comic Neue', cursive;
+    /* Fundo roxo bem transparente */
+    background: rgba(88, 101, 242, 0.15);
+    /* Borda roxa sutil */
+    border: 1px solid rgba(88, 101, 242, 0.4);
+	text-decoration: none;
+}
+
+.btn-servidor:hover {
+    background: rgba(88, 101, 242, 0.3);
+    border-color: rgba(88, 101, 242, 0.8);
+    box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+    transform: translateY(-3px);
+	text-decoration: none;
+}
+
+/* --- AJUSTES DOS ÍCONES (Igual ao anterior) --- */
+.container-botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
+}
+.icone { margin-right: 10px; font-size: 1.3rem;}
+.icone-discord { width: 24px; height: 24px; margin-right: 10px; object-fit: contain;}
+
+
+
+
+
+.section {
+	max-width: 1200px;
+	margin: 100px auto;
+	padding: 0 20px;
+}
+
+.section-title {
+	font-size: 32px;
+	margin-bottom: 40px;
+	font-weight: 600;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 30px;
+}
+
+.card {
+	padding: 30px;
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	transition: all 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-8px);
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.card h3 {
+	font-family: 'Comic Neue', cursive;
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+
+.card p {
+	font-family: 'Comic Neue', cursive;
+	font-size: 15px;
+	color: #cfcfcf;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.tag {
+	font-family: 'Comic Neue', cursive;
+	display: inline-block;
+	padding: 6px 14px;
+	font-size: 13px;
+	border-radius: 999px;
+	background: rgba(88,101,242,0.15);
+	color: #8ea1ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================
+   BOTÃO FLUTUANTE
+====================== */
+
 .menu-btn {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 80px;
-  height: 50px;
+  top: 25px;
+  left: 25px;
+  width: 35px;
+  height: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: none;
-  border: none;
+  justify-content: center;
+  gap: 6px;
   cursor: pointer;
-  z-index: 1002;
+  z-index: 1003;
 }
 
 .menu-btn span {
-  height: 3px;
+  position: absolute;
+  height: 4px;
   width: 100%;
   background: white;
-  border-radius: 2px;
+  border-radius: 10px;
   transition: 0.3s ease;
 }
 
-/* ANIMAÇÃO VIRAR X */
+/* posição normal */
+.menu-btn span:nth-child(1) {
+  top: 0;
+}
+
+.menu-btn span:nth-child(2) {
+  top: 10px;
+}
+
+.menu-btn span:nth-child(3) {
+  top: 20px;
+}
+
+/* X perfeito */
 .menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  top: 10px;
+  transform: rotate(45deg);
 }
 
 .menu-btn.active span:nth-child(2) {
@@ -229,58 +254,90 @@ h1 {
 }
 
 .menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  top: 10px;
+  transform: rotate(-45deg);
 }
+/* ======================
+   SIDEBAR GLASS
+====================== */
 
-/* SIDEBAR */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -260px;
-  width: 260px;
-  height: 100%;
-  background: #1a1f24;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.4s cubic-bezier(.77,0,.18,1);
-  z-index: 1001;
-}
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  padding-top: 120px;
 
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  padding: 18px 30px;
-  font-size: 50px;
-  transition: 0.3s;
-}
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-right: 1px solid rgba(255,255,255,0.1);
 
-.sidebar a:hover {
-  background: #2f3a44;
-}
-
-.sidebar a.active {
-  background: #2f3a44;
-  border-left: 4px solid white;
+  transition: 0.4s ease;
+  z-index: 1002;
 }
 
 .sidebar.active {
   left: 0;
 }
 
-/* OVERLAY COM BLUR */
+.sidebar ul {
+  list-style: none;
+  padding: 0 40px;
+}
+
+.sidebar ul li {
+  margin: 25px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+  opacity: 0.7;
+}
+
+/* ======================
+   OVERLAY
+====================== */
+
 .overlay {
   position: fixed;
   inset: 0;
-  backdrop-filter: blur(6px);
   background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
   opacity: 0;
-  pointer-events: none;
-  transition: 0.3s;
-  z-index: 1000;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1001;
 }
 
 .overlay.active {
   opacity: 1;
-  pointer-events: all;
+  visibility: visible;
 }
+
+/* Ajuste conteúdo */
+
+main {
+  margin-top: 120px;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
