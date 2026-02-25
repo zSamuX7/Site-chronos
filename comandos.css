@@ -16,11 +16,18 @@ html, body {
     );
     color: white;
 }
-@media (max-width: 768px) {
-  .item-retangulo {
-    width: 90%;
-    height: auto;
+.container {
+  display: block; 
+  padding: 20px;
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex; 
+    justify-content: space-around;
+    max-width: 1200px; 
+    margin: 0 auto;
   }
+}
 
 /* HEADER */
 header {
