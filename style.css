@@ -17,7 +17,7 @@ html, body {
     color: white;
 }
 html {
-background: #0C007A;
+	background: #0C007A;
 }
 header {
 	text-align: center;
@@ -43,67 +43,40 @@ header {
 	margin-bottom: -10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-/* --- ESTILO BASE DOS BOTÕES (COM EFEITO VIDRO) --- */
 .btn {
     display: flex;
     align-items: center;
-    padding: 12px 24px; /* Um pouco mais gordinho fica melhor no vidro */
-    border-radius: 12px; /* Bordas mais arredondadas combinam mais */
+    padding: 12px 24px;
+    border-radius: 12px;
     color: white;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    
-    /* O DNA DO GLASSMORPHISM */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* Sombra suave colorida para dar profundidade */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
-
-/* Efeito de clique (afundar) */
 .btn:active {
     transform: scale(0.95);
 }
-
-
-/* --- BOTÃO 1: ADICIONAR (VIDRO VERDE) --- */
 .btn-adicionar {
 	font-family: 'Comic Neue', cursive;
-    /* Fundo verde bem transparente */
     background: rgba(16, 185, 129, 0.15);
-    /* Borda verde sutil */
     border: 1px solid rgba(16, 185, 129, 0.4);
 	text-decoration: none;
 }
 
 .btn-adicionar:hover {
-    /* Fica mais sólido e brilha mais no hover */
     background: rgba(16, 185, 129, 0.3);
     border-color: rgba(16, 185, 129, 0.8);
     box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
     transform: translateY(-3px);
 	text-decoration: none;
 }
-
-
-/* --- BOTÃO 2: SERVIDOR (VIDRO DISCORD/ROXO) --- */
 .btn-servidor {
 	font-family: 'Comic Neue', cursive;
-    /* Fundo roxo bem transparente */
     background: rgba(88, 101, 242, 0.15);
-    /* Borda roxa sutil */
     border: 1px solid rgba(88, 101, 242, 0.4);
 	text-decoration: none;
 }
@@ -115,8 +88,6 @@ header {
     transform: translateY(-3px);
 	text-decoration: none;
 }
-
-/* --- AJUSTES DOS ÍCONES (Igual ao anterior) --- */
 .container-botoes {
     display: flex;
     gap: 20px;
@@ -186,141 +157,95 @@ header {
 	background: rgba(88,101,242,0.15);
 	color: #8ea1ff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================
-   BOTÃO FLUTUANTE
-====================== */
-
 .menu-btn {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-  width: 25px;
-  height: 15px
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  cursor: pointer;
-  z-index: 1003;
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	width: 25px;
+	height: 15px
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 4px;
+	cursor: pointer;
+	z-index: 1003;
 }
 
 .menu-btn span {
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: white;
-  border-radius: 10px;
-  transition: 0.3s ease;
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background: white;
+	border-radius: 10px;
+	transition: 0.3s ease;
 }
-
-/* posição normal */
 .menu-btn span:nth-child(1) {
-  top: 0;
+	top: 0;
 }
-
 .menu-btn span:nth-child(2) {
-  top: 8px;
+	top: 8px;
 }
-
 .menu-btn span:nth-child(3) {
-  top: 16px;
+	top: 16px;
 }
-
-/* X perfeito */
 .menu-btn.active span:nth-child(1) {
-  top: 10px;
-  transform: rotate(45deg);
+	top: 10px;
+	transform: rotate(45deg);
 }
-
 .menu-btn.active span:nth-child(2) {
-  opacity: 0;
+	opacity: 0;
 }
-
 .menu-btn.active span:nth-child(3) {
-  top: 10px;
-  transform: rotate(-45deg);
+	top: 10px;
+	transform: rotate(-45deg);
 }
-/* ======================
-   SIDEBAR GLASS
-====================== */
-
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 280px;
-  height: 100vh;
-  padding-top: 120px;
-
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border-right: 1px solid rgba(255,255,255,0.1);
-
-  transition: 0.4s ease;
-  z-index: 1002;
+	position: fixed;
+	top: 0;
+	left: -300px;
+	width: 280px;
+	height: 100vh;
+	padding-top: 120px;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(25px);
+	-webkit-backdrop-filter: blur(25px);
+	border-right: 1px solid rgba(255,255,255,0.1);
+	transition: 0.4s ease;
+	z-index: 1002;
 }
-
 .sidebar.active {
-  left: 0;
+	left: 0;
 }
-
 .sidebar ul {
-  list-style: none;
-  padding: 0 40px;
+	list-style: none;
+	padding: 0 40px;
 }
-
 .sidebar ul li {
-  margin: 25px 0;
+	margin: 25px 0;
 }
-
 .sidebar ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: 0.2s;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	transition: 0.2s;
 }
-
 .sidebar ul li a:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
-
-/* ======================
-   OVERLAY
-====================== */
-
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(3px);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-  z-index: 1001;
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.4);
+	backdrop-filter: blur(3px);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s ease;
+	z-index: 1001;
 }
-
 .overlay.active {
-  opacity: 1;
-  visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
-
-/* Ajuste conteúdo */
-
 main {
   margin-top: 120px;
 }
@@ -339,15 +264,4 @@ body.no-scroll {
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
